@@ -1,0 +1,77 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: vite@6.3.5
+npm ERR! Found: @types/node@16.18.126
+npm ERR! node_modules/@types/node
+npm ERR!   @types/node@"*" from @jest/console@27.5.1
+npm ERR!   node_modules/@jest/console
+npm ERR!     @jest/console@"^27.5.1" from @jest/core@27.5.1
+npm ERR!     node_modules/@jest/core
+npm ERR!       @jest/core@"^27.5.1" from jest@27.5.1
+npm ERR!       node_modules/jest
+npm ERR!         peer jest@"^27.0.0 || ^28.0.0" from jest-watch-typeahead@1.1.0
+npm ERR!         node_modules/jest-watch-typeahead
+npm ERR!         1 more (react-scripts)
+npm ERR!       1 more (jest-cli)
+npm ERR!     @jest/console@"^27.5.1" from @jest/reporters@27.5.1
+npm ERR!     node_modules/@jest/reporters
+npm ERR!       @jest/reporters@"^27.5.1" from @jest/core@27.5.1
+npm ERR!       node_modules/@jest/core
+npm ERR!         @jest/core@"^27.5.1" from jest@27.5.1
+npm ERR!         node_modules/jest
+npm ERR!         1 more (jest-cli)
+npm ERR!     2 more (@jest/test-result, jest-runner)
+npm ERR!   @types/node@"*" from @jest/core@27.5.1
+npm ERR!   node_modules/@jest/core
+npm ERR!     @jest/core@"^27.5.1" from jest@27.5.1
+npm ERR!     node_modules/jest
+npm ERR!       peer jest@"^27.0.0 || ^28.0.0" from jest-watch-typeahead@1.1.0
+npm ERR!       node_modules/jest-watch-typeahead
+npm ERR!         jest-watch-typeahead@"^1.0.0" from react-scripts@5.0.1
+npm ERR!         node_modules/react-scripts
+npm ERR!       1 more (react-scripts)
+npm ERR!     @jest/core@"^27.5.1" from jest-cli@27.5.1
+npm ERR!     node_modules/jest-cli
+npm ERR!       jest-cli@"^27.5.1" from jest@27.5.1
+npm ERR!       node_modules/jest
+npm ERR!         peer jest@"^27.0.0 || ^28.0.0" from jest-watch-typeahead@1.1.0
+npm ERR!         node_modules/jest-watch-typeahead
+npm ERR!         1 more (react-scripts)
+npm ERR!   36 more (@jest/environment, @jest/fake-timers, @jest/reporters, ...)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peerOptional @types/node@"^18.0.0 || ^20.0.0 || >=22.0.0" from vite@6.3.5
+npm ERR! node_modules/vite
+npm ERR!   peer vite@"^5.0.0 || ^6.0.0" from @storybook/react-vite@9.0.6
+npm ERR!   node_modules/@storybook/react-vite
+npm ERR!     dev @storybook/react-vite@"9.0.6" from the root project
+npm ERR!   peer vite@"^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0" from @joshwooding/vite-plugin-react-docgen-typescript@0.6.0
+npm ERR!   node_modules/@joshwooding/vite-plugin-react-docgen-typescript
+npm ERR!     @joshwooding/vite-plugin-react-docgen-typescript@"0.6.0" from @storybook/react-vite@9.0.6
+npm ERR!     node_modules/@storybook/react-vite
+npm ERR!       dev @storybook/react-vite@"9.0.6" from the root project
+npm ERR!   1 more (@storybook/builder-vite)
+npm ERR! 
+npm ERR! Conflicting peer dependency: @types/node@22.15.30
+npm ERR! node_modules/@types/node
+npm ERR!   peerOptional @types/node@"^18.0.0 || ^20.0.0 || >=22.0.0" from vite@6.3.5
+npm ERR!   node_modules/vite
+npm ERR!     peer vite@"^5.0.0 || ^6.0.0" from @storybook/react-vite@9.0.6
+npm ERR!     node_modules/@storybook/react-vite
+npm ERR!       dev @storybook/react-vite@"9.0.6" from the root project
+npm ERR!     peer vite@"^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0" from @joshwooding/vite-plugin-react-docgen-typescript@0.6.0
+npm ERR!     node_modules/@joshwooding/vite-plugin-react-docgen-typescript
+npm ERR!       @joshwooding/vite-plugin-react-docgen-typescript@"0.6.0" from @storybook/react-vite@9.0.6
+npm ERR!       node_modules/@storybook/react-vite
+npm ERR!         dev @storybook/react-vite@"9.0.6" from the root project
+npm ERR!     1 more (@storybook/builder-vite)
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See C:\Users\koichiro\AppData\Local\npm-cache\eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\koichiro\AppData\Local\npm-cache\_logs\2025-06-09T22_27_53_824Z-debug-0.log
