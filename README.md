@@ -1,46 +1,120 @@
-# Getting Started with Create React App
+# React + Storybook サンプルプロジェクト
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+このプロジェクトは、React コンポーネントを Storybook を使用して開発・ドキュメント化するためのサンプルです。
 
-## Available Scripts
+## 技術スタック
 
-In the project directory, you can run:
+- React 18
+- Storybook 7
+- TailwindCSS
+- PropTypes
 
-### `npm start`
+## セットアップ
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+# 依存関係のインストール
+npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 開発サーバーの起動
+npm start
 
-### `npm test`
+# Storybookの起動
+npm run storybook
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## プロジェクト構造
 
-### `npm run build`
+```
+src/
+  ├── components/          # コンポーネントディレクトリ
+  │   └── Button/         # Buttonコンポーネント
+  │       ├── Button.js   # コンポーネント本体
+  │       └── Button.stories.js  # Storybookのストーリー
+  └── App.tsx             # メインアプリケーション
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## コンポーネントの開発フロー
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. `src/components/` 配下に新しいコンポーネントディレクトリを作成
+2. コンポーネントファイル（`.js`）とストーリーファイル（`.stories.js`）を作成
+3. Storybook で動作確認しながら開発
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Storybook の活用方法
 
-### `npm run eject`
+### 1. コンポーネントのドキュメント化
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `stories.js`ファイルにコンポーネントの使用例を記載
+- PropTypes を使用して型情報とドキュメントを提供
+- タグ（autodocs）を使用して自動ドキュメント生成
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. インタラクティブな開発
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Controls アドオンでプロパティをリアルタイムに変更
+- Actions アドオンでイベントハンドラーの動作確認
+- Viewport アドオンでレスポンシブデザインのテスト
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 3. バリエーションの管理
 
-## Learn More
+- 異なるプロパティセットで複数のストーリーを作成
+- エッジケースや特殊なケースもストーリーとして管理
+- デザインシステムの一貫性を確保
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Button コンポーネントの例
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 基本的な使用方法
+
+```jsx
+import { Button } from './components/Button/Button';
+
+// プライマリーボタン
+<Button
+  label="Click me"
+  variant="primary"
+  onClick={() => console.log('Clicked!')}
+/>
+
+// セカンダリーボタン
+<Button
+  label="Cancel"
+  variant="secondary"
+  onClick={() => console.log('Cancelled')}
+/>
+```
+
+### プロパティ
+
+| プロパティ名 | 型                       | 必須 | デフォルト値 | 説明                           |
+| ------------ | ------------------------ | ---- | ------------ | ------------------------------ |
+| label        | string                   | ✓    | -            | ボタンに表示するテキスト       |
+| variant      | 'primary' \| 'secondary' | -    | 'primary'    | ボタンのスタイルバリエーション |
+| onClick      | function                 | -    | -            | クリック時のコールバック関数   |
+
+## ベストプラクティス
+
+1. **コンポーネントの分離**
+
+   - 各コンポーネントは独立して動作するように設計
+   - 必要最小限のプロパティで制御可能に
+
+2. **ストーリーの作成**
+
+   - 基本的なユースケースを必ずストーリー化
+   - エッジケースや特殊なケースもカバー
+   - 適切な名前とドキュメントを付与
+
+3. **型の定義**
+
+   - PropTypes で型情報を明確に定義
+   - 必須プロパティを明示
+   - プロパティの制約を適切に設定
+
+4. **テスト**
+   - Storybook のテスト機能を活用
+   - インタラクションテストの実装
+   - アクセシビリティテストの実施
+
+## 参考リンク
+
+- [Storybook 公式ドキュメント](https://storybook.js.org/)
+- [React 公式ドキュメント](https://reactjs.org/)
+- [TailwindCSS 公式ドキュメント](https://tailwindcss.com/)
